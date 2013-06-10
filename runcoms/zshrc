@@ -12,3 +12,24 @@ fi
 
 # Customize to your needs...
 
+# Load RVM into a shell session *as a function*
+if [ -e "$HOME/.rvm/scripts/rvm" ]; then
+  [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
+fi
+
+if [ `uname` = 'Linux' ]; then
+  # Apt aliases
+  alias update='sudo apt-get update'
+  alias upgrade='sudo apt-get dist-upgrade'
+  alias search='apt-cache search'
+  alias install='sudo apt-get install'
+  alias purge='sudo apt-get autoremove --purge'
+  alias clean='sudo apt-get autoremove --purge && sudo apt-get autoclean'
+  alias upup='update && upgrade'
+  alias ppa='sudo add-apt-repository'
+fi
+
+if [ `uname` = 'Darwin' ]; then
+  # Use compiled terminal Vim
+  alias vim='/Applications/MacVim.app/Contents/MacOS/Vim'
+fi
