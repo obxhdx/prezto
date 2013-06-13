@@ -84,6 +84,7 @@ fi
 if [ `uname` = 'Darwin' ]; then
   export NODE_PATH='/usr/local/share/npm/lib/node_modules/'
   export ANDROID_SDK_ROOT='/usr/local/opt/android-sdk'
-  export PATH='/usr/local/share/npm/bin':$PATH
   export PATH='/usr/local/bin':$PATH # gid correct svn
+  export PATH='/usr/local/share/npm/bin':$PATH # Node binaries
+  export PATH="$(brew --prefix coreutils)/libexec/gnubin":$PATH # GNU coreutils
 fi
