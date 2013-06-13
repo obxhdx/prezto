@@ -34,3 +34,8 @@ if [ `uname` = 'Darwin' ]; then
   alias v='vi'
   alias vim='/Applications/MacVim.app/Contents/MacOS/Vim' # Use compiled terminal Vim
 fi
+
+# Load local custom configurations
+if [ -e "$HOME/.zlocalrc" ]; then
+  [[ -s "$HOME/.zlocalrc" ]] && source "$HOME/.zlocalrc"
+fi
