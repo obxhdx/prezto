@@ -31,7 +31,6 @@ fi
 
 if [ `uname` = 'Darwin' ]; then
   alias l='ls'
-  alias v='vi'
   alias vim='/Applications/MacVim.app/Contents/MacOS/Vim' # Use compiled terminal Vim
 fi
 
@@ -42,3 +41,7 @@ fi
 
 # LS_COLORS
 eval $(dircolors -b ~/.LS_COLORS)
+
+# Enable fasd
+eval "$(fasd --init auto)"
+alias v='f -e vim' # run vim on the most frecent file matching parameter
