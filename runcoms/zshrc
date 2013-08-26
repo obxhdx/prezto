@@ -26,7 +26,7 @@ fi
 
 if [ `uname` = 'Darwin' ]; then
   alias l='ls'
-  alias vim='/Applications/MacVim.app/Contents/MacOS/Vim' # Use compiled terminal Vim
+  alias vim='~/Applications/MacVim.app/Contents/MacOS/Vim' # Use homebrew's Vim in the terminal
 fi
 
 # Load local custom configurations
