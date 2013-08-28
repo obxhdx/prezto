@@ -17,8 +17,15 @@ task :install do
 end
 
 task :purge do
+  deleted_files = ''
+
   Dir.glob("#{ENV['HOME']}/.z*").each do |f|
-    FileUtils.rm_r f
-    puts "#{f} deleted!"
+    unless f.match /.zhistory|.zlocalrc/
+      FileUtils.rm_r f
+      deleted_files << "- #{f}\n"
+    end
   end
+
+  puts "Files deleted:\n#{deleted_files}\n" unless deleted_files.empty?
+  puts "Files preserved:\n- #{ENV['HOME']}/.zhistory\n- #{ENV['HOME']}/.zlocalrc\n\n"
 end
