@@ -22,6 +22,7 @@ if [ `uname` = 'Linux' ]; then
   alias clean='sudo apt-get autoremove --purge && sudo apt-get autoclean'
   alias upup='update && upgrade'
   alias ppa='sudo add-apt-repository'
+  alias ack='ack-grep'
 fi
 
 if [ `uname` = 'Darwin' ]; then
