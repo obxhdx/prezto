@@ -79,6 +79,7 @@ fi
 if [ `uname` = 'Linux' ]; then
   export JAVA_HOME='/usr/lib/jvm/default-java'
   export PATH='/opt/lampp/bin':$PATH
+  export TERM='xterm-256color'
 fi
 
 if [ `uname` = 'Darwin' ]; then
