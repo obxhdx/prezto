@@ -13,7 +13,7 @@ fi
 # Customize to your needs...
 
 # Aliases
-if [ `uname` = 'Linux' ]; then
+if [[ "$OSTYPE" == linux* ]]; then
   alias update='sudo apt-get update'
   alias upgrade='sudo apt-get dist-upgrade'
   alias search='apt-cache search'
@@ -25,7 +25,7 @@ if [ `uname` = 'Linux' ]; then
   alias ack='ack-grep'
 fi
 
-if [ `uname` = 'Darwin' ]; then
+if [[ "$OSTYPE" == darwin* ]]; then
   alias l='ls'
   alias vim='~/Applications/MacVim.app/Contents/MacOS/Vim' # Use homebrew's Vim in the terminal
 fi

@@ -76,13 +76,13 @@ fi
 
 # Customize to your needs...
 
-if [ `uname` = 'Linux' ]; then
+if [[ "$OSTYPE" == linux* ]]; then
   export JAVA_HOME='/usr/lib/jvm/default-java'
   export PATH='/opt/lampp/bin':$PATH
   export TERM='xterm-256color'
 fi
 
-if [ `uname` = 'Darwin' ]; then
+if [[ "$OSTYPE" == darwin* ]]; then
   export NODE_PATH='/usr/local/share/npm/lib/node_modules/'
   export ANDROID_SDK_ROOT='/usr/local/opt/android-sdk'
   export PATH='/usr/local/bin':$PATH # gid correct svn
