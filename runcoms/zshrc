@@ -36,7 +36,11 @@ if [ -e "$HOME/.zlocalrc" ]; then
 fi
 
 # LS_COLORS
-eval $(dircolors -b ~/.LS_COLORS)
+if [ -e "$HOME/.LS_COLORS" ]; then
+  eval $(dircolors -b ~/.LS_COLORS)
+elif [ -e "$HOME/.dircolors" ]; then
+  eval $(dircolors -b ~/.dircolors)
+fi
 
 # Enable fasd
 eval "$(fasd --init auto)"
